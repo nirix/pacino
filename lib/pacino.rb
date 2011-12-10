@@ -1,9 +1,23 @@
 require 'sinatra'
+require 'rocketeer'
+require 'sequel'
 
 module Pacino
-  get '/' do
-    "Say hello to my little friend! - actually we'll be online shortly."
+  __DIR__ = ::File.dirname(__FILE__)
+  
+  configure do
+    set :views => __DIR__ + '/pacino/views'
   end
-end
+  
+  class << self
+    attr_accessor :database
+    
+    def run
+      require 'pacino/helpers/init'
+      require 'pacino/models/init'
+      require 'pacino/nodes/init'
+    end #run
+  end # class << self
+end # Pacino
 
 require 'pacino/version'
