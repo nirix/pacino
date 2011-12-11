@@ -4,8 +4,8 @@ module Pacino
     render_view 'index'
   end
   
-  #get '/:slug_slug.:post_id' do
-  #  @post = Post[params[:post_id]]
-  #  render_view 'posts/view'
-  #end
+  get /\/[\w]+.([0-9]+)/ do |post_id|
+    @post = Post[post_id]
+    render_view 'posts/view'
+  end
 end
