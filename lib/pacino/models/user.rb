@@ -42,8 +42,7 @@ module Pacino
     
     # Prepare password
     def prepare_password
-      salt = [Array.new(6){rand(256).chr}.join].pack("m").chomp
-      self.salt, self.password = salt, Digest::SHA256.hexdigest(self.password + salt)
+      self.password = ::BCrypt::Password.create(self.password)
     end
   end
 end
