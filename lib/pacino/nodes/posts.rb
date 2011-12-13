@@ -15,6 +15,7 @@ module Pacino
   
   get /\/[\w]+.([0-9]+)/ do |post_id|
     @post = Post[post_id]
+    @page_title.push @post.title
     render_view 'posts/view'
   end
 end

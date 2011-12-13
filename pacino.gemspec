@@ -12,10 +12,11 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/nirix/pacino'
   s.description = 'Pacino is a simple Sinatra powered blog/cms system designed to be fast and easy to use.'
 
-  s.files = `cd #{path}; git ls-files`.split("\n").sort
+  s.files = `git ls-files`.split("\n").sort
   s.required_ruby_version = '>= 1.9.2'
 
   s.add_dependency('sequel', ['~> 3.30.0'])
   s.add_dependency('sinatra', ['~> 1.3.1'])
   s.add_dependency('rocketeer', ['~> 0.3.0'])
+  s.add_dependency('bcrypt-ruby')
 end

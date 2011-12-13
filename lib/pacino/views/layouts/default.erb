@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<header>
-		<title><%= Pacino.title %></title>
+		<title><%= Pacino.title %><%= @page_title.count > 0 ? ' / ' + @page_title.join(' / ') : '' %></title>
 		<%= css_inc_tag '/assets/css/reset.css' %>
 		<%= css_inc_tag '/assets/css/master.css' %>
 	</header>
