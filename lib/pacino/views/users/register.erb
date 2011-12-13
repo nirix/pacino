@@ -1,0 +1,31 @@
+<div class="content">
+	<div id="register_form" class="tabular box">
+		<h2>Create Account</h2>
+<% if @user and @user.errors.any? %>
+		<div class="message error">
+			<ul>
+			<% @user.errors.each do |k, msg| %>
+				<li><%= msg[0] %></li>
+			<% end %>
+			</ul>
+		</div>
+<% end %>
+		<form action="<%= request.path_info %>" method="post">
+			<p>
+				<label for="username">Username</label>
+				<%= text_field :username, :value => params[:username] %>
+			</p>
+			<p>
+				<label for="password">Password</label>
+				<%= password_field :password %>
+			</p>
+			<p>
+				<label for="email">Email</label>
+				<%= email_field :email, :value => params[:email] %>
+			</p>
+			<p>
+				<input type="submit" value="Create Account">
+			</p>
+		</form>
+	</div>
+</div>

@@ -8,6 +8,8 @@
 #
 
 before do
+  @page_title = [];
+  
   if request.cookies["_sess"]
     user = User.auth_via_cookie(*request.cookies["_sess"].split('&'))
   else

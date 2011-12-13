@@ -1,4 +1,6 @@
 Sequel::Model.plugin(:validation_helpers)
+Sequel::Model.plugin(:validation_class_methods)
+Sequel::Model.plugin(:hook_class_methods)
 Sequel::Model.plugin(:association_pks)
 
 Sequel.extension(:pagination)

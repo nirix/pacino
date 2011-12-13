@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<header>
+		<title><%= Pacino.title %><%= @page_title.count > 0 ? ' / ' + @page_title.join(' / ') : '' %></title>
+		<%= css_inc_tag '/assets/css/reset.css' %>
+		<%= css_inc_tag '/assets/css/pacino.css' %>
+	</header>
+	<body>
+		<header id="header">
+			<h1><%= Pacino.title %><%= @page_title.count > 0 ? ' / ' + @page_title.join(' / ') : '' %></h1>
+		</header>
+		<div id="wrapper">
+			<section id="page">
+				<%= yield %>
+			</section>
+			<footer id="footer">
+				Powered by <a href="https://github.com/nirix/pacino">Pacino</a> <%= Pacino::VERSION %>
+			</footer>
+		</div>
+	</body>
+</html>
