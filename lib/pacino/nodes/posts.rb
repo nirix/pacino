@@ -1,3 +1,12 @@
+#
+# Pacino
+# Copyright (c) 2011 Jack Polgar
+#
+# @license New BSD License
+# @copyright Jack P.
+# @author Jack P. <nrx@nirix.net>
+#
+
 module Pacino
   get '/' do
     @posts = Post.order(:published_at.desc)
