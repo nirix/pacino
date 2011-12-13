@@ -1,5 +1,5 @@
 <article class="post">
 	<h2><%= link_to_unless_current post.title, post.href %></h2>
-	<div class="meta"></div>
+	<div class="meta">Posted <%= time_ago_in_words(post.published_at) %></div>
 	<%= post.body %>
 </article>
