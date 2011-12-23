@@ -28,6 +28,17 @@ module Pacino
       return (user and user.id = uid and user.login_id = hash) ? user : false
     end
     
+    # Check username and password
+    def self.login(username, password)
+      user = User.where('username = ?', username).first
+      
+      if user and BCrypt::Password.new(user.password) == password
+        user
+      else
+        false
+      end
+    end
+    
     # Before create
     def before_create
       self.prepare_password
