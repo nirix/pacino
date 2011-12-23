@@ -10,7 +10,7 @@
 require 'sinatra'
 require 'rocketeer'
 require 'sequel'
-require 'bycrypt'
+require 'bcrypt'
 
 module Pacino
   __DIR__ = ::File.dirname(__FILE__)
