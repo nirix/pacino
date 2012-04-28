@@ -1,5 +1,6 @@
-<div class="content">
-	<% @posts.each do |post| %>
-		<%= render_partial 'posts/post', :post => post %>
-	<% end %>
-</div>
+<% @posts.each do |slug, p| %>
+<article>
+	<h2><%= p['title'] %></h2>
+	<%= mrkdwn p['body'] %>
+</article>
+<% end %>

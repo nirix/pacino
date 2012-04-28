@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-	<header>
-		<title><%= Pacino.title %><%= @page_title.count > 0 ? ' / ' + @page_title.join(' / ') : '' %></title>
-		<%= css_inc_tag '/assets/css/reset.css' %>
-		<%= css_inc_tag '/assets/css/master.css' %>
-	</header>
+<html lang="en" dir="ltr">
+	<head>
+		<title><%= Pacino.title %></title>
+		<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|Oxygen" rel="stylesheet">
+		<%= css_link_tag '/css/style.css' %>
+	</head>
 	<body>
 		<div id="wrapper">
 			<header id="header">
-				<h1><%= link_to Pacino.title, url('/') %></h1>
+				<h1><%= link_to Pacino.title, '/' %></h1>
 			</header>
-			<section id="page">
-				<%= yield %>
-			</section>
+			<div id="page">
+<%= yield %>
+				<div class="clearfix"></div>
+			</div>
 			<footer id="footer">
-				Powered by <a href="https://github.com/nirix/pacino">Pacino</a> <%= Pacino::VERSION %>
+				&copy; <%= Pacino.title %>, powered by Pacino <%= Pacino::VERSION %>
 			</footer>
 		</div>
 	</body>

@@ -1,0 +1,58 @@
+body {
+	font-family: Oxygen, sans-serif;
+	font-size: 12px;
+	background: #eee;
+	margin: 0;
+	padding: 20px;
+}
+
+h1, h2 {
+	font-family: 'Dancing Script', Oxygen, sans-serif;
+	
+	a {
+		text-decoration: none;
+	}
+}
+
+#wrapper {
+	background: #fff;
+	width: 600px;
+	margin: 0 auto;
+	padding: 30px;
+}
+
+a {
+	color: #000;
+	text-docoration: underline;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+#header h1 {
+	font-size: 45px;
+	margin: 0;
+	margin-bottom: 25px;
+}
+
+article {
+	margin-bottom: 15px;
+	
+	h2 {
+		font-size: 22px;
+		margin: 0;
+		margin-bottom: 10px;
+		border-bottom: 1px dashed #ccc;
+		padding: 0 0 5px;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+#footer {
+	margin-top: 25px;
+	color: #777;
+}
